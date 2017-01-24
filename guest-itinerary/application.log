@@ -1,0 +1,42 @@
+2017-01-23 12:57:38 INFO  ServiceImpl:86 - Itinerary for customerId1
+2017-01-23 12:57:38 INFO  ServiceImpl:86 - Itinerary for customerId1
+2017-01-23 12:57:38 ERROR ServiceImpl:92 - In Itineraryjava.lang.NullPointerException
+2017-01-23 12:57:38 INFO  ServiceImpl:86 - Itinerary for customerId1
+2017-01-23 12:57:38 ERROR ServiceImpl:92 - In Itineraryjava.lang.NullPointerException
+2017-01-23 12:57:38 INFO  ShowItineraryWS:62 - Itinerary for1
+2017-01-23 12:57:38 ERROR ShowItineraryWS:69 - java.lang.NullPointerException
+2017-01-23 12:57:59 INFO  ContextLoader:285 - Root WebApplicationContext: initialization started
+2017-01-23 12:57:59 INFO  XmlWebApplicationContext:510 - Refreshing Root WebApplicationContext: startup date [Mon Jan 23 12:57:59 IST 2017]; root of context hierarchy
+2017-01-23 12:57:59 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/rest-servlet.xml]
+2017-01-23 12:57:59 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/cxf/cxf.xml]
+2017-01-23 12:57:59 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/cxf/cxf-servlet.xml]
+2017-01-23 12:58:00 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/ApplicationContext.xml]
+2017-01-23 12:58:00 INFO  PropertySourcesPlaceholderConfigurer:172 - Loading properties file from class path resource [application.properties]
+2017-01-23 12:58:00 INFO  AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-23 12:58:00 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-01-23 12:58:01 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2017-01-23 12:58:01 INFO  Version:41 - HHH000412: Hibernate Core {4.2.2.Final}
+2017-01-23 12:58:01 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2017-01-23 12:58:01 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2017-01-23 12:58:02 INFO  Dialect:130 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2017-01-23 12:58:02 INFO  TransactionFactoryInitiator:68 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-01-23 12:58:02 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2017-01-23 12:58:03 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2017-01-23 12:58:03 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2017-01-23 12:58:03 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2017-01-23 12:58:03 INFO  TableMetadata:65 - HHH000261: Table found: guestapp.DiningReservation
+2017-01-23 12:58:03 INFO  TableMetadata:66 - HHH000037: Columns: [arrivaldate, reservationid, createddate, customerid, arrivaltime, updateddate, diningtype, noofpeople, status]
+2017-01-23 12:58:03 INFO  TableMetadata:68 - HHH000108: Foreign keys: []
+2017-01-23 12:58:03 INFO  TableMetadata:69 - HHH000126: Indexes: [reservationid_unique, primary]
+2017-01-23 12:58:04 INFO  TableMetadata:65 - HHH000261: Table found: guestapp.ResortReservation
+2017-01-23 12:58:04 INFO  TableMetadata:66 - HHH000037: Columns: [arrivaldate, reservationid, createddate, noofnights, customerid, updateddate, departuredate, noofpeople, roomtype, status]
+2017-01-23 12:58:04 INFO  TableMetadata:68 - HHH000108: Foreign keys: []
+2017-01-23 12:58:04 INFO  TableMetadata:69 - HHH000126: Indexes: [reservationid_unique, primary]
+2017-01-23 12:58:04 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2017-01-23 12:58:04 INFO  HibernateTransactionManager:360 - Using DataSource [org.springframework.jdbc.datasource.DriverManagerDataSource@7c1503a3] of Hibernate SessionFactory for HibernateTransactionManager
+2017-01-23 12:58:04 INFO  ContextLoader:325 - Root WebApplicationContext: initialization completed in 4762 ms
+2017-01-23 12:58:09 INFO  ServiceImpl:86 - Itinerary for customerId990
+2017-01-23 12:58:09 INFO  DiningClient:74 - Itinerary for Dining
+2017-01-23 12:58:09 ERROR ServiceImpl:92 - In Itineraryjava.lang.NullPointerException
+2017-01-23 12:58:09 INFO  ShowItineraryWS:62 - Itinerary for990
+2017-01-23 12:59:47 INFO  XmlWebApplicationContext:862 - Closing Root WebApplicationContext: startup date [Mon Jan 23 12:57:59 IST 2017]; root of context hierarchy

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+
+	<!-- to activate annotations in beans already registered in the application 
+		context -->
+	<context:annotation-config />
+
+	<context:property-placeholder location="classpath:application.properties" />
+
+	<!-- scans packages to find and register beans within the application context -->
+	<context:component-scan base-package="com.itinerary.guest.itinerary.*" />
+
+	<!-- turn on spring transaction annotation -->
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	
+	<!-- Transaction Manager -->
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- Session Factory -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="annotatedClasses">
+			<list>
+				<value>com.itinerary.guest.itinerary.model.entity.DiningReservation
+				</value>
+				<value>com.itinerary.guest.itinerary.model.entity.ResortReservation
+				</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+				<prop key="hibernate.show_sql">true</prop>
+			</props>
+		</property>
+	</bean>
+
+	<!-- dataSource configuration -->
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="${DB_URL}" />
+		<property name="username" value="root" />
+		<property name="password" value="root" />
+	</bean>
+
+	<bean id="httpClient" class="org.apache.http.impl.client.DefaultHttpClient">
+	</bean>
+	
+	<bean id="diningClient" class="com.itinerary.guest.itinerary.clients.DiningClient">
+		<property name="diningRestEndpoint" value="${DINING_REST_ENDPOINT}"></property>
+	</bean>
+
+	<bean id="resortClient" class="com.itinerary.guest.itinerary.clients.ResortClient">
+	<property name="resortRestEndpoint" value="${RESORT_REST_ENDPOINT}"></property>
+	</bean>
+	
+	<bean id="itinerary" class="com.itinerary.guest.itinerary.model.Itinerary">
+	</bean>
+	
+	<bean id="service" class="com.itinerary.guest.itinerary.service.ServiceImpl">
+		<property name="diningClient" ref="diningClient" />
+		<property name="resortClient" ref="resortClient" />
+		<property name="itinerary" ref="itinerary" />
+	</bean>
+
+	<bean id="showItineraryWS" class="com.itinerary.guest.itinerary.ws.ShowItineraryWS">
+		<property name="service" ref="service" />
+	</bean>
+
+</beans>
