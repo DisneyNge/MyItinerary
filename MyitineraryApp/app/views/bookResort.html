@@ -1,0 +1,265 @@
+<div>
+			<div class="wrapper">
+			            <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                <div class="navbar-header">
+      <a class="navbar-brand" href="" id="brand">My ItineraryApp</a>
+       <ul class="nav navbar-nav">
+      
+      <li><a href="">About</a></li>
+      <li><a href="">Help</a></li>
+	      </ul>
+	</div>
+	<ul class="nav navbar-right top-nav">
+						<div class="navbar-brand" id="brand">
+							Welcome <strong><span id="fname" ng-bind="firstname"></span></strong> <strong><span id="lname" ng-bind="lastname"></span></strong>
+						</div>
+
+						<li><a href=" \MyitineraryApp\app/#/" style="margin-right:20px"><span style="margin-right:10px" class="glyphicon glyphicon-log-out"></span>Log out</a></li>
+					</ul>
+
+  
+   
+
+
+      
+		
+		
+                	<div class="collapse navbar-collapse" id="navbar-ex1-collapse">
+                    <ul class="nav navbar-nav navbar-default side-nav">
+                        <li class=" ">
+                            <a href="#bookResort"><i class="fa fa-fw fa-hotel"></i>Book Resort</a>
+                        </li>
+                        <li class=" ">
+                            <a href="#bookDining"><i class="fa fa-spoon"></i> Book Dining</a>
+                        </li>
+                        <li class=" ">
+                            <a href="#viewItineary"><i class="fa fa-fw fa-table"></i> View Itinerary</a>
+                        </li>
+                    </ul>
+                </div>
+           </nav>
+		   </div>
+
+	<div class="page-wrapper" style="margin-left: 110px">
+
+		<div class="container">
+
+
+
+
+
+			<div class="rst">
+
+
+
+				<h1 style="color: black; text-align: center">
+
+					<strong>Book Resort </strong>
+
+				</h1>
+
+				<h2 style="color: black; text-align: center">
+
+					Welcome to Capgemini Resort
+
+				</h2>
+
+				<hr />
+
+				<form name="resortform" novalidate>
+
+					<div class="row">
+
+						<div class="col-sm-3 col-sm-offset-4">
+
+							<div class="form-group">
+
+								<label style="color:black"><strong>Room Type</strong></label> <select class="form-control"
+									ng-model="room_type" ng-init="room_type ='Standard'"
+									style="width: 100%; margin-bottom: 30px;">
+
+									<option>Standard</option>
+
+									<option>Deluxe</option>
+
+									<option>Suite</option>
+
+								</select><br />
+
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class='col-sm-3'>
+
+
+
+						<label style="color:black"><strong>Check In</strong></label>
+
+
+
+
+
+						<p class="input-group">
+
+
+
+							<input type="text" id="Checkin" name="checkInDate"
+								class="form-control" uib-datepicker-popup="{{format}}"
+								ng-model="dt" is-open="popup1.opened"
+								datepicker-options="dateOptions" ng-required="true"
+								close-text="Close" alt-input-formats="altInputFormats"
+								ng-change="dayDiff()" min-date=dateOptions.minDate/> <span
+								class="input-group-btn">
+
+								<button type="button" class="btn btn-default" ng-click="open1()">
+
+									<i class="glyphicon glyphicon-calendar"></i>
+
+								</button>
+
+							</span>
+
+						</p>
+
+					</div>
+
+
+
+					<div class="col-sm-3">
+
+						<label style="color:black">Check out</label>
+
+
+
+						<p class="input-group">
+
+							<input type="text" id="Checkout" name="checkOutDate"
+								class="form-control" uib-datepicker-popup="{{format}}"
+								ng-model="dt1" is-open="popup2.opened"
+								datepicker-options="dateOptions" ng-required="true"
+								close-text="Close" alt-input-formats="altInputFormats"
+								ng-change="dayDiff()" /> <span class="input-group-btn">
+
+								<button type="button" class="btn btn-default" ng-click="open2()">
+
+									<i class="glyphicon glyphicon-calendar"></i>
+
+								</button>
+
+							</span>
+
+						</p>
+
+					</div>
+
+
+
+					<div class='col-sm-2'>
+
+						<div class="form-group">
+
+							<label style="color:black">Number of Nights</label> <input type="text"
+								name="NumberOfNights" ng-model="numberOfNights"
+								class="form-control" ng-init="numberOfNights ='0'" readonly />
+
+						</div>
+
+					</div>
+
+
+
+					<div class='col-sm-2'>
+
+						<div class="form-group">
+
+							<label style="color:black">Number of Guests</label> <select class="form-control"
+								ng-model="numberOfGuests" ng-init="numberOfGuests ='1'">
+
+								<option>1</option>
+
+								<option>2</option>
+
+								<option>3</option>
+
+								<option>4</option>
+
+								<br />
+
+							</select>
+
+						</div>
+
+					</div>
+			</div>
+
+		</div>
+
+	</div>
+
+
+
+	<footer>
+
+		<div class="col-sm-12">
+
+			<div class="col-sm-6"></div>
+
+			<div class="col-sm-1">
+
+				<button type="reset" class="btn btn-lg btn-primary"
+					style="margin-left: 0px; margin-top: 20px" ng-click="bookreset()">Reset</button>
+
+			</div>
+
+
+
+
+
+			<div class="col-sm-1">
+
+				<button type="button" class="btn btn-lg btn-primary"
+					ng-click="bookresort()" style="margin-left: 15px; margin-top: 20px">Book</button>
+			</div>
+
+			<div class="col-sm-4"></div>
+
+		</div>
+
+	</footer>
+					<div id="wrapper">
+            <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+                <div class="navbar-footer">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+					<ul class="nav navbar-left bottom-nav">
+				  <div  class="navbar-brand"><a href="">News</a></div>
+                </ul>
+				 <ul class="nav navbar-left bottom-nav">
+				  <div  class="navbar-brand"><a href="">Contact us: 9874112356</a></div>
+                </ul>
+                    
+                <div class="drop">
+                 
+				<ul class="nav navbar-right bottom-nav">
+				  <div  class="navbar-brand"><a href="https://www.google.co.in/search?q=www.disneyworld&oq=www.disneyworld&aqs=chrome..69i57.7563j0j7&sourceid=chrome&ie=UTF-8&safe=active" style="margin-right:20px">www.disneyWorld.co.in</div></a>
+                </ul>
+				 <ul class="nav navbar-right bottom-nav">
+				  <div  class="navbar-brand"><a href="">Services</div>
+                </ul>
+
+        </div>
+		</div>
+   
+   </div>
+
+	</form>
+
+</div>
+

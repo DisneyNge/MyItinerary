@@ -1,0 +1,197 @@
+<div>
+<div class="wrapper">
+			            <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                <div class="navbar-header">
+      <a class="navbar-brand" href="" id="brand">My ItineraryApp</a>
+       <ul class="nav navbar-nav">
+      
+      <li><a href="">About</a></li>
+      <li><a href="">Help</a></li>
+	      </ul>
+	</div>
+	<ul class="nav navbar-right top-nav">
+						<div class="navbar-brand" id="brand">
+							Welcome <strong><span id="fname" ng-bind="firstname"></span></strong> <strong><span id="lname" ng-bind="lastname"></span></strong>
+						</div>
+
+						<li><a href=" \MyitineraryApp\app/#/" style="margin-right:20px"><span style="margin-right:10px" class="glyphicon glyphicon-log-out"></span>Log out</a></li>
+					</ul>
+					</nav>
+					</div>
+					
+					 <div class="page-wrapper" style="margin-left:110px">
+
+              <div class="iternary_main">
+
+  <header>Home Page</header>
+
+<br>
+
+  <div class="container">
+
+<div class="row">
+
+<h3 style="color:black; padding-left: 20px;font-style:Arial Bold">Resort Reservations: Capgemini Resort</h3> <hr/>
+
+</div>
+
+<div class="resortA" ng-repeat="resort in resortList">
+
+        <div class="row">
+
+            <div class="col-sm-12">
+
+                <div class="col-sm-3">Reservation :<strong> <span ng-bind="resort.reservation_Id"></span> </strong></div>
+
+                <div class="col-sm-3">Room Type :<strong> <span ng-bind="resort.resort_type"></span>  </strong></div>
+
+                <div class="col-sm-3">Number of guests :<strong> <span ng-bind="resort.no_of_guests"></span> </strong></div>
+
+                <div class="col-sm-3">Status :<strong> <span ng-bind="resort.status"></span> </strong></div>
+
+            </div>
+
+   </div>
+
+   <br>
+
+            <div class="row">
+
+   <div class="col-sm-12">
+
+                <div class="col-sm-3">Arrival Date :<strong> <span ng-bind="resort.checkIn_date"></span> </strong></div>
+
+                <div class="col-sm-3">Departure Date :<strong> <span ng-bind="resort.checkout_date"></span> </strong></div>
+
+                <div class="col-sm-3">Number of nights :<strong> <span ng-bind="resort.no_of_nights"></span>  </strong></div>
+
+               <div class="col-sm-3">
+
+                   <button type="button" class="btn btn-primary" ng-disabled="resort.status == 'Cancelled'" ng-click="cancel(resort.reservation_Id)">Cancel Booking</button>
+
+                   </div>
+
+       
+
+            </div>
+
+</div>
+
+</div>
+
+   <div class="row">
+
+<h3 style="color:black; padding-left: 20px;font-style:Arial Bold">Dining Reservations: Capgemini Fine Dining</h3><hr/>
+
+</div>
+
+  <div class="dineA" ng-repeat="dining in diningList">
+
+        <div class="row">
+
+            <div class="col-sm-12">
+
+                <div class="col-sm-3">Reservation :<strong> <span ng-bind="dining.reservation_ID"> </span></strong></div>
+
+                <div class="col-sm-3">Dining Type :<strong><span ng-bind="dining.dining_type"></span> </strong></div>
+
+                <div class="col-sm-3">Number of guests :<strong> <span ng-bind="dining.no_Of_Guests"></span></strong></div>
+
+                <div class="col-sm-3">Status :<strong> <span ng-bind="dining.status"></span></strong></div>
+
+            </div>
+
+   </div>
+
+   <br>
+
+            <div class="row">
+
+   <div class="col-sm-12">
+
+                <div class="col-sm-3">Dining Date :<strong><span ng-bind="dining.dineIn_date"></span> </strong></div>
+
+                <div class="col-sm-3">Dining Time :<strong> <span ng-bind="dining.dineIn_time"></span> </strong></div>
+
+               <div class="col-sm-3"></div>
+
+      <div class="col-sm-3">
+
+                   <button type="button" class="btn btn-primary" ng-disabled="dining.status == 'Cancelled'" ng-click="dineCancel(dining.reservation_ID)">Cancel Booking</button>
+
+                   </div>
+
+            </div>
+
+                    </div>
+
+  </div>
+
+</div>
+
+</div>
+
+                 
+
+               
+
+    </div>
+
+  
+   
+
+
+      
+		
+		
+                	<div class="collapse navbar-collapse" id="navbar-ex1-collapse">
+                    <ul class="nav navbar-nav navbar-default side-nav">
+                        <li class=" ">
+                            <a href="#bookResort"><i class="fa fa-fw fa-hotel"></i>Book Resort</a>
+                        </li>
+                        <li class=" ">
+                            <a href="#bookDining"><i class="fa fa-spoon"></i> Book Dining</a>
+                        </li>
+                        <li class=" ">
+                            <a href="#viewItineary"><i class="fa fa-fw fa-table"></i> View Itinerary</a>
+                        </li>
+                    </ul>
+                </div>
+           </nav>
+		   </div>
+		   
+		   
+		   
+		   
+		   
+		   <div id="wrapper">
+            <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+                <div class="navbar-footer">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+					<ul class="nav navbar-left bottom-nav">
+				  <div  class="navbar-brand"><a href="">News</a></div>
+                </ul>
+				 <ul class="nav navbar-left bottom-nav">
+				  <div  class="navbar-brand"><a href="">Contact us: 9874112356</a></div>
+                </ul>
+                    
+                <div class="drop">
+                 
+				<ul class="nav navbar-right bottom-nav">
+				  <div  class="navbar-brand"><a href="https://www.google.co.in/search?q=www.disneyworld&oq=www.disneyworld&aqs=chrome..69i57.7563j0j7&sourceid=chrome&ie=UTF-8&safe=active" style="margin-right:20px">www.disneyWorld.co.in</div></a>
+                </ul>
+				 <ul class="nav navbar-right bottom-nav">
+				  <div  class="navbar-brand"><a href="">Services</div>
+                </ul>
+
+        </div>
+		</div>
+   
+   </div>
+   </div>
+		   

@@ -1,0 +1,9 @@
+{
+    "guest_ID" : "30",
+    "resort_type" : "STANDARD",
+    "checkIn_date" : "2010-01-10T00:00:00Z",
+    "checkout_date" : "2010-01-10T00:00:00Z",
+    "no_of_nights" : "2",
+     "no_of_guests" : "3",
+     "status" : "BOOKED"
+}

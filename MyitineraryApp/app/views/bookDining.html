@@ -1,0 +1,196 @@
+<div>
+			<div class="wrapper">
+			            <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                <div class="navbar-header">
+      <a class="navbar-brand" href="" id="brand">My ItineraryApp</a>
+       <ul class="nav navbar-nav">
+      
+      <li><a href="">About</a></li>
+      <li><a href="">Help</a></li>
+	      </ul>
+	
+	<ul class="nav navbar-right top-nav">
+						<div class="navbar-brand" id="brand">
+							Welcome <strong><span id="fname" ng-bind="firstname"></span></strong> <strong><span id="lname" ng-bind="lastname"></span></strong>
+						</div>
+
+						<li><a href=" \MyitineraryApp\app/#/" style="margin-right:20px"><span style="margin-right:10px" class="glyphicon glyphicon-log-out"></span>Log out</a></li>
+					</ul>
+        </div>
+                <div class="collapse navbar-collapse" id="navbar-ex1-collapse">
+                    <ul class="nav navbar-nav navbar-default side-nav">
+                        <li class=" ">
+                            <a href="#bookResort"><i class="fa fa-fw fa-hotel"></i>Book Resort</a>
+                        </li>
+                        <li class=" ">
+                            <a href="#bookDining"><i class="fa fa-spoon"></i> Book Dining</a>
+                        </li>
+                        <li class=" ">
+                            <a href="#viewItineary"><i class="fa fa-fw fa-table"></i> View Itinerary</a>
+                        </li>
+                    </ul>
+                </div>
+           </nav>
+   </div>
+<div>
+<div class="wrapper">
+			            <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                <div class="navbar-header">
+      <a class="navbar-brand" href="" id="brand">My ItineraryApp</a>
+       <ul class="nav navbar-nav">
+      
+      <li><a href="">About</a></li>
+      <li><a href="">Help</a></li>
+	      </ul>
+	</div>
+	<ul class="nav navbar-right top-nav">
+						<div class="navbar-brand" id="brand">
+							Welcome <strong><span id="fname" ng-bind="firstname"></span></strong> <strong><span id="lname" ng-bind="lastname"></span></strong>
+						</div>
+
+						<li><a href=" \MyitineraryApp\app/#/" style="margin-right:20px"><span style="margin-right:10px" class="glyphicon glyphicon-log-out"></span>Log out</a></li>
+					</ul>
+
+  
+   
+
+
+      
+		
+		
+                	<div class="collapse navbar-collapse" id="navbar-ex1-collapse">
+                    <ul class="nav navbar-nav navbar-default side-nav">
+                        <li class=" ">
+                            <a href="#bookResort"><i class="fa fa-fw fa-hotel"></i>Book Resort</a>
+                        </li>
+                        <li class=" ">
+                            <a href="#bookDining"><i class="fa fa-spoon"></i> Book Dining</a>
+                        </li>
+                        <li class=" ">
+                            <a href="#viewItineary"><i class="fa fa-fw fa-table"></i> View Itinerary</a>
+                        </li>
+                    </ul>
+                </div>
+           </nav>
+		   </div>
+		   
+		      <div class="page-wrapper" style="margin-left:100px">
+    <div class="container">
+                <div class="dine">
+    <h1 style="color:black; text-align:center"><strong>Book Dining </strong></h1>
+    <h2 style="color:black; text-align:center">Welcome to Capgemini Fine Dining Restaurant</h2>
+ <hr/>
+  
+       <form name="dining">
+        <div class="row">
+            <div class="col-sm-3 col-sm-offset-4">
+   <div class="form-group">
+                    <label style="color:black">Dining Type</label>
+            <select class="form-control" ng-model="diningType" ng-init="diningType='BreakFast'" style="width: 100%;margin-bottom: 30px;">
+        <option >BreakFast</option>
+        <option>Lunch</option>
+        <option>Dinner</option>
+    </select><br/>
+        </div>
+        </div>
+  </div>
+  
+            <div class='col-sm-3'>
+                <div class="form-group">
+                    <label style="color:black">Select a Date</label>
+                    <p class="input-group">
+                 <input type="text" id="date" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats"/>
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+                        </span>
+                    </p>
+                </div>
+            </div>
+   <div class='col-sm-1'> </div>
+           <div class='col-sm-3'>
+                <div class="form-group">
+                    <label style="color:black">Number of Guests</label>
+                    <select class="form-control" ng-model="noOfGuests" ng-init="noOfGuests='1'" style="width: 100%">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+      <option value="11">11</option>
+      
+                    </select>
+                </div>
+            </div>
+   <div class='col-sm-1'> </div>
+     <div class='col-sm-3'>
+     <div class="form-group">
+<label style="color:black">Time</label>
+<div>
+  
+ <!-- <input type="time" id="time" class="form-control" name="time"  ng-model="tm" ng-click="timeNow()" >  -->
+  
+<input type="time" class="form-control" name="time" id="time" ng-model="dtime">
+   </div>
+</div>
+ </div>
+ <div class='col-sm-1'> </div>
+ 
+ <br>
+ 
+    <footer>
+<div class="col-sm-12">
+<div class="col-sm-4"></div>
+<div class="col-sm-1">
+<button type="reset" class="btn btn-lg btn-primary" style="margin-left:20px; margin-top:20px" ng-click="/">Reset</button>
+</div>
+    
+  <div class="col-sm-1">
+  <button type="button" class="btn btn-lg btn-primary" ng-click="book()" style="margin-left:35px; margin-top:20px">Book</button></div>
+  <div class="col-sm-6"></div>
+ </div>
+    </footer>
+</form>
+</div>
+           </div>      
+               
+    </div>
+		   
+		   
+		   
+		   <div id="wrapper">
+            <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+                <div class="navbar-footer">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+					<ul class="nav navbar-left bottom-nav">
+				  <div  class="navbar-brand"><a href="">News</a></div>
+                </ul>
+				 <ul class="nav navbar-left bottom-nav">
+				  <div  class="navbar-brand"><a href="">Contact us: 9874112356</a></div>
+                </ul>
+                    
+                <div class="drop">
+                 
+				<ul class="nav navbar-right bottom-nav">
+				  <div  class="navbar-brand"><a href="https://www.google.co.in/search?q=www.disneyworld&oq=www.disneyworld&aqs=chrome..69i57.7563j0j7&sourceid=chrome&ie=UTF-8&safe=active" style="margin-right:20px">www.disneyWorld.co.in</div></a>
+                </ul>
+				 <ul class="nav navbar-right bottom-nav">
+				  <div  class="navbar-brand"><a href="">Services</div>
+                </ul>
+
+        </div>
+		</div>
+   
+   </div>
+   </div>
+		   
+    </div>

@@ -1,0 +1,210 @@
+<div>
+			<div class="wrapper">
+			            <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                <div class="navbar-header">
+      <a class="navbar-brand" href="#">My ItineraryApp</a>
+       <ul class="nav navbar-nav">
+      
+      <li><a href="">About</a></li>
+      <li><a href="">Help</a></li>
+	  
+    </ul>
+	</div>
+	
+  
+   
+</nav>
+
+       
+		
+		</div>
+		
+		
+		<div class="page-wrapper">
+		<div class="regmain">
+ <header>
+     Guest Registration
+ </header>
+ <br> 
+ <form name="userForm"  novalidate>
+    <div class="container">
+  <!--EMAIL-->
+<div class="row">
+<div class="col-sm-12">
+<div class="col-sm-3"></div>
+      
+ <div class="form-group">
+ <label for="email" class="col-sm-2 control-label">Email Id<span style="color:red">*</span></label>
+ 
+ <div class="col-sm-4">
+ <input type="email" name="email" class="form-control" ng-model="email" ng-maxlength= "50" autofocus="autofocus" required>
+ <span style="color: red" ng-show="userForm.email.$dirty && userForm.email.$invalid"> 
+ <span ng-show="userForm.email.$dirty && userForm.email.$error.required">Email is required.</span> 
+ <span ng-show="userForm.email.$dirty && userForm.email.$error.maxlength">Maximum 50 characters only</span> 
+ <span ng-show="userForm.email.$dirty && userForm.email.$error.email">Invalid email address.</span>
+</span>
+</div>
+<div class="col-sm-3"></div>
+</div>
+</div>
+</div>
+<br> 
+<!--FIRST NAME-->
+<div class="row">
+<div class="col-sm-12">
+<div class="col-sm-3"></div>
+<div class="form-group">
+<label for="firstname" class="col-sm-2  control-label">First Name<span style="color:red">*</span></label>
+<div class="col-sm-4">
+<input type="text" name="firstname" class="form-control" ng-model="firstname" ng-init="firstname=''" ng-maxlength="50" required>
+ <span style = "color:red" ng-show = "userForm.firstname.$dirty && userForm.firstname.$invalid">
+ <span ng-show = "userForm.firstname.$dirty && userForm.firstname.$error.required">Your First Name is required.</span>
+ <span ng-show = "userForm.firstname.$dirty && userForm.firstname.$error.maxlength">Maximum 50 characters only</span>
+ </span>
+</div>
+<div class="col-sm-3"></div>
+</div>
+</div>
+</div>
+<br>
+<!--LAST NAME-->
+<div class="row"> 
+<div class="col-sm-12">
+<div class="col-sm-3"></div>
+<div class="form-group">
+<label for="lastname" class="col-sm-2  control-label">Last Name<span style="color:red">*</span></label>
+<div class="col-sm-4">
+<input type="text" name="lastname" class="form-control" ng-model="lastname" ng-init="lastname=''" ng-maxlength="50"  required>
+   <span style = "color:red" ng-show = "userForm.lastname.$dirty && userForm.lastname.$invalid">
+ <span ng-show = "userForm.lastname.$dirty && userForm.lastname.$error.required">Your Last Name is required.</span>
+ <span ng-show = "userForm.lastname.$dirty && userForm.lastname.$error.maxlength">Maximum 50 characters only</span>
+ </span>
+</div>
+<div class="col-sm-3"></div>
+</div>
+</div>
+</div>
+<br> 
+<!-- ADDRESS-->
+<div class="row">
+<div class="col-sm-12">
+<div class="col-sm-3"></div>
+<div class="form-group">
+<label for="address" class="col-sm-2  control-label">Address</label>
+<div class="col-sm-4">
+<textarea name="address" rows="3" cols="5" class="form-control" ng-model="address" ng-maxlength="255">
+</textarea>
+</div>
+<div class="col-sm-3"></div>
+</div>
+</div>
+ </div>
+ <br> 
+  <!-- PHONE -->
+ <div class="row">
+ <div class="col-sm-12">
+ <div class="col-sm-3"></div>
+<div class="form-group">
+<label for="phone" class="col-sm-2  control-label">Phone<span style="color:red">*</span></label>
+<div class="col-sm-4">
+<input type="number" name="phone" class="form-control" ng-model="phone"  ng-maxlength="15" required>
+  <span style = "color:red" ng-show = "userForm.phone.$dirty && userForm.phone.$invalid">
+ <span ng-show = "userForm.phone.$dirty && userForm.phone.$error.required">Valid phone number is required.</span>
+   <span ng-show = "userForm.phone.$dirty && userForm.phone.$error.maxlength">Maximum 15 characters are allowed.</span>
+</span>
+  </div>
+  <div class="col-sm-3"></div>
+</div>
+</div>
+ </div>
+ <br>
+    <!-- PASSWORD -->
+<div class="row">
+<div class="col-sm-12">
+<div class="col-sm-3"></div>
+<div class="form-group">
+<label for="pw1" class="col-sm-2  control-label">Password<span style="color:red">*</span></label>
+<div class="col-sm-4">
+ <input type="password" id="pw1" name="pw1" class="form-control" ng-model="pw1" ng-minlength="4"  required=""/>
+  <span style = "color:red" ng-show = "userForm.pw1.$dirty && userForm.pw1.$invalid">
+ <span ng-show = "userForm.pw1.$dirty && userForm.pw1.$error.required">Password is required.</span>
+  <span ng-show = "userForm.pw1.$dirty && userForm.pw1.$error.minlength"></span>
+ <span ng-show = "userForm.pw1.$dirty && userForm.pw1.$error.maxlength">Maximum 20 characters are allowed.</span>
+ 
+</span></div>
+   <div class="col-sm-3"></div>
+</div>
+</div>
+</div>
+  <br>
+   <!-- CONFIRM PASSWORD -->
+ <div class="row">
+<div class="col-sm-12">
+<div class="col-sm-3"></div>
+<div class="form-group">
+<label for="pw2" class="col-sm-2  control-label">Confirm Password<span style="color:red">*</span></label>
+<div class="col-sm-4">
+<input type="password" id="pw2" name="pw2" class="form-control" ng-model="pw2"  ng-maxlength="20" required="" pw-check="pw1" />
+  <span style = "color:red" ng-show = "userForm.pw2.$dirty && userForm.pw2.$invalid">
+  <span ng-show = "userForm.pw2.$dirty && userForm.pw2.$error.required"></span>
+ <span ng-show = "userForm.pw2.$dirty && userForm.pw2.$error.maxlength">Maximum 20 characters are allowed.</span>
+ <span class="msg-error" ng-show="userForm.pw2.$dirty && userForm.pw2.$error.pwmatch">Passwords don't match.</span>
+</span>
+  </div>
+  <div class="col-sm-3"></div>
+</div>
+</div>
+ </div>
+ <br> 
+ <!-- BUTTON -->
+<footer>
+<div class="row">
+<div class="col-sm-12">
+<div class="col-sm-6"></div>
+<div class="col-sm-1">
+<button type="reset" class="btn btn-primary" ng-click="resetForm()">Reset</button>
+</div>
+<div class="col-sm-1">
+<button type="submit" class="btn btn-primary value="Submit" title="Submit" ng-disabled="!userForm.$valid" ng-click="submit()">Submit</button>
+ </div>
+  <div class="col-sm-4">
+     </div>
+      </div>
+    </div>
+   </footer>
+   </form>
+ </div>
+</div>
+</div>
+   <div id="wrapper">
+            <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+                <div class="navbar-footer">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+					<ul class="nav navbar-left bottom-nav">
+				  <div  class="navbar-brand"><a href="">News</a></div>
+                </ul>
+				 <ul class="nav navbar-left bottom-nav">
+				  <div  class="navbar-brand"><a href="">Contact us: 9874112356</a></div>
+                </ul>
+                    
+                <div class="drop">
+                 
+				<ul class="nav navbar-right bottom-nav">
+				  <div  class="navbar-brand"><a href="https://www.google.co.in/search?q=www.disneyworld&oq=www.disneyworld&aqs=chrome..69i57.7563j0j7&sourceid=chrome&ie=UTF-8&safe=active " style="margin-right:20px">www.disneyWorld.co.in</div></a>
+                </ul>
+				 <ul class="nav navbar-right bottom-nav">
+				  <div  class="navbar-brand"><a href="">Services</div>
+                </ul>
+
+        </div>
+		</div>
+   
+   </div>
+        </div>
+ 
+ 

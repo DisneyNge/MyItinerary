@@ -1,0 +1,122 @@
+<div>
+			<div class="wrapper">
+			            <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                <div class="navbar-header">
+      <a class="navbar-brand" href="">My ItineraryApp</a>
+       <ul class="nav navbar-nav">
+      
+      <li><a href="">About</a></li>
+      <li><a href="">Help</a></li>
+	  
+    </ul>
+	</div>
+	<ul class="nav navbar-nav navbar-right">
+		
+       <li><a href="#login" style="margin-right:20px"><span style="margin-right:10px" class="glyphicon glyphicon-log-in"></span></a></li>
+    </ul>
+  
+   
+</nav>
+</div>
+		
+		
+		<div class="page-wrapper">
+		
+                        <div class="login">
+						
+	<div class="login_main">
+		<div class="login_header">
+			<h1>Login Page</h1>
+		</div>
+		<div class="container">
+			<form name="myForm" novalidate>
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="abc">
+							<div class="col-sm-3 col-sm-offset-3">Email<span style="color:red">*</span></div>
+						</div>
+						<div class="col-sm-2">
+							<input name="email" type="email" ng-maxlength="50"
+								ng-model="email" required> <span style="color: red"
+								ng-show="myForm.email.$dirty && myForm.email.$invalid"> <span
+								ng-show="myForm.email.$dirty && myForm.email.$error.required">Email
+									is required.</span> <span
+								ng-show="myForm.email.$dirty && myForm.email.$error.maxlength">Maximum
+									50 characters only</span> <span
+								ng-show="myForm.email.$dirty && myForm.email.$error.email">Invalid
+									email address.</span>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="asd">
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="col-sm-3 col-sm-offset-3">Password<span style="color:red">*</span></div>
+							<div class="col-sm-3">
+								<input name="password" type="password" ng-maxlength="50"
+									ng-model="password" required> <span style="color: red"
+									ng-show="myForm.password.$dirty && myForm.password.$invalid">
+									<span
+									ng-show="myForm.password.$dirty && myForm.password.$error.required">password
+										is required.</span> <span
+									ng-show="myForm.password.$dirty && myForm.password.$error.maxlength">Maximum
+										50 characters</span>
+
+								</span>
+							</div>
+						</div>
+					</div>
+					<br>
+				</div>
+		</div>
+	</div>
+	<div class="xyz">
+		<div class="row">
+			<div class="col-sm-12">
+				<a href="#registration"><button type="button"
+						class="btn btn-lg btn-primary">NewUser?Register</button></a>
+				<button type="button" class="btn btn-lg btn-primary value="
+					Login" title="Login" ng-disabled="!myForm.$valid"
+					ng-click="login()">Login</button>
+			</div>
+
+		</div>
+	</div>
+	</form>
+
+</div>
+   </div>
+   <div id="wrapper">
+            <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+                <div class="navbar-footer">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+					<ul class="nav navbar-left bottom-nav">
+				  <div  class="navbar-brand"><a href="">News</a></div>
+                </ul>
+				 <ul class="nav navbar-left bottom-nav">
+				  <div  class="navbar-brand"><a href="">Contact us: 9874112356</a></div>
+                </ul>
+                    
+                <div class="drop">
+                 
+				<ul class="nav navbar-right bottom-nav">
+				  <div  class="navbar-brand"><a href="https://www.google.co.in/search?q=www.disneyworld&oq=www.disneyworld&aqs=chrome..69i57.7563j0j7&sourceid=chrome&ie=UTF-8&safe=active" style="margin-right:20px">www.disneyWorld.co.in</div></a>
+                </ul>
+				 <ul class="nav navbar-right bottom-nav">
+				  <div  class="navbar-brand"><a href="">Services</div>
+                </ul>
+
+        </div>
+		</div>
+   
+   </div>
+        </div>
+		
+		
+
